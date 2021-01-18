@@ -1,16 +1,28 @@
-package com.DemoWebApp.model;
+package com.DemoWebApp.BookExchange.model;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="User")
 public class User {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int UserId;
+	@Column
+	private String Password, UserName, Organization, City;
+	@Column
+	private long ContactNum;
 	
-	private String UserId, Password, UserName, Organization, City;
-	private int ContactNum;
-	
-	public String getUserID()
+	public int getUserID()
 	{
 		return this.UserId;
 	}
 	
-	public void setUserId(String UserId)
+	public void setUserId(int UserId)
 	{
 		this.UserId=UserId;		
 	}
@@ -55,12 +67,12 @@ public class User {
 		this.City=City;		
 	}
 	
-	public int getContactNum()
+	public long getContactNum()
 	{
 		return this.ContactNum;
 	}
 	
-	public void setPrice(int ContactNum)
+	public void setContactNum(long ContactNum)
 	{
 		this.ContactNum=ContactNum;		
 	}

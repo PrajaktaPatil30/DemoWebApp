@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages="com.DemoWebApp.controller")
+@ComponentScan(basePackages= {"com.DemoWebApp.BookExchange.controller","com.DemoWebApp.BookExchange.service"})
 @EnableAutoConfiguration
 public class BookExchangeApplication {
 
